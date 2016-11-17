@@ -14,5 +14,11 @@ namespace KlasseListeApp.Model
         public string Email { get; set; }
         public string GitHub { get; set; }
 
+        public override string ToString()
+        {
+            return Firstname + " " + Surname + " " + MobNummer + " " + Email + " " + GitHub + " ";
+        }
+
     }
+  
 }

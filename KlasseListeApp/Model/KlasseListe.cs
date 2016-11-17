@@ -9,5 +9,13 @@ namespace KlasseListeApp.Model
 {
     public class KlasseListe : ObservableCollection<KlasseInfo>
     {
+
+
+
+        public KlasseListe() : base()
+        {
+            this.Add(new KlasseInfo() { Firstname = "Fornavn", Surname = "Efternavn", MobNummer = 12345678, Email = "mail@mail.dk", GitHub = "Github brugernavn" });
+        }
+
     }
 }
