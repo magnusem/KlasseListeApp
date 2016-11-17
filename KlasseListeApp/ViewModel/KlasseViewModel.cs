@@ -18,13 +18,16 @@ namespace KlasseListeApp.ViewModel
         public Model.KlasseInfo selectedElev
         {
             get { return SelectedElev; }
-            set { SelectedElev = value; }
+            set { SelectedElev = value;
+                OnPropertyChanged(nameof(selectedElev));
+            }
         }
 
 
         public KlasseViewModel()
         {
             KListe = new Model.KlasseListe();
+            AddElevCommand = new RelayCommand(AddElevCommand);
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -35,5 +38,12 @@ namespace KlasseListeApp.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        public Model.KlasseInfo NewElev { get; set; }
+
+        public void AddNewElev()
+        {
+            KListe.Add(NewElev);
+        }
+        public RelayCommand AddElevCommand { get; set; }
     }
 }
