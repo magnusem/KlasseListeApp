@@ -13,6 +13,6 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="555" Margin="82,84,0,0" VerticalAlignment="Top" Width="443" ItemsSource="{Binding KListe}"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="555" Margin="82,84,0,0" VerticalAlignment="Top" Width="443" ItemsSource="{Binding KListe}" SelectedItem="{Binding selectedElev, Mode=TwoWay}"/>
     </Grid>
 </Page>
