@@ -20,5 +20,6 @@
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="839,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.MobNummer, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Tlf nummer"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="941,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Email, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Email"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="1010,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.GitHub, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Github brugernavn"/>
+        <Button x:Name="button" Content="Tilføj" HorizontalAlignment="Left" Margin="746,378,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
