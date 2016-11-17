@@ -39,4 +39,4 @@ namespace KlasseListeApp
         public event EventHandler CanExecuteChanged;
     }
 }
-}
+

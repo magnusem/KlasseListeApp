@@ -27,7 +27,7 @@ namespace KlasseListeApp.ViewModel
         public KlasseViewModel()
         {
             KListe = new Model.KlasseListe();
-            AddElevCommand = new RelayCommand(AddElevCommand);
+            AddElevCommand = new RelayCommand(AddNewElev, null);
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
