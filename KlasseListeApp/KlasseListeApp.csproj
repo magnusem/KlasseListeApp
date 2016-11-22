@@ -104,6 +104,7 @@
     <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModel\AddElevCommand.cs" />
     <Compile Include="ViewModel\KlasseViewModel.cs" />
+    <Compile Include="ViewModel\SletElevCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

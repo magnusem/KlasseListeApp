@@ -7,15 +7,15 @@ using System.Windows.Input;
 
 namespace KlasseListeApp.ViewModel
 {
-    public class AddElevCommand : ICommand
+    public class SletElevCommand : ICommand
     {
-        private readonly Action execute;    
+        private readonly Action executeSlet;
 
         public event EventHandler CanExecuteChanged;
 
-        public AddElevCommand(Action execute)
+        public SletElevCommand(Action executeSlet)
         {
-            this.execute = execute;
+            this.executeSlet = executeSlet;
         }
 
         public bool CanExecute(object parameter)
@@ -25,7 +25,7 @@ namespace KlasseListeApp.ViewModel
 
         public void Execute(object parameter)
         {
-            execute();
+            executeSlet();
         }
     }
 }

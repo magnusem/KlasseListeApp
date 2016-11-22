@@ -28,9 +28,11 @@ namespace KlasseListeApp.ViewModel
         {
             KListe = new Model.KlasseListe();
             AddElevCommand = new AddElevCommand(AddNewElev);
-            //selectedElev = new Model.KlasseInfo();
+            selectedElev = new Model.KlasseInfo();
             //AddElevCommand = new RelayCommand(AddNewElev, null);
             NewElev = new Model.KlasseInfo();
+            SletElevCommand = new SletElevCommand(SletElev);
+            
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -51,5 +53,14 @@ namespace KlasseListeApp.ViewModel
             KListe.Add(NewElev);
         }
         //public RelayCommand AddElevCommand { get; set; }
+
+        public SletElevCommand SletElevCommand { get; set; }
+
+
+        public void SletElev()
+        {
+            KListe.Remove(SelectedElev);
+        }
+
     }
 }
