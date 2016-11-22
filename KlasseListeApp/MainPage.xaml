@@ -17,9 +17,9 @@
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="82,562,0,0" TextWrapping="Wrap" Text="{Binding selectedElev}" VerticalAlignment="Top" Height="88" Width="443" RenderTransformOrigin="0.509,0.5"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="672,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Firstname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Fornavn"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="751,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Surname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Efternavn"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="839,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.MobNummer, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Tlf nummer"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="839,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.MobNummer, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Mobil"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="941,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Email, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Email"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="1010,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.GitHub, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Github brugernavn"/>
-        <Button x:Name="button" Content="Tilføj" HorizontalAlignment="Left" Margin="746,378,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Tilføj" HorizontalAlignment="Left" Margin="746,378,0,0" VerticalAlignment="Top" Command="{Binding AddElevCommand}"/>
     </Grid>
 </Page>
