@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace KlasseListeApp.ViewModel
 {
@@ -60,6 +62,13 @@ namespace KlasseListeApp.ViewModel
         public void SletElev()
         {
             KListe.Remove(SelectedElev);
+        }
+
+
+        public string GetKlasseListAsJson()
+        {
+            string jsonText = JsonConvert.SerializeObject(KListe);
+            return jsonText;
         }
 
     }
