@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
+using Windows.Storage;
 using System.Threading.Tasks;
 
 namespace KlasseListeApp.Model
@@ -13,6 +15,9 @@ namespace KlasseListeApp.Model
         public string MobNummer { get; set; }
         public string Email { get; set; }
         public string GitHub { get; set; }
+
+        StorageFolder localfolder = null;
+
 
         public override string ToString()
         {

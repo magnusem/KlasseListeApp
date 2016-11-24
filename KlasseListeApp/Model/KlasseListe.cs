@@ -22,11 +22,22 @@ namespace KlasseListeApp.Model
             this.Add(new KlasseInfo() { Firstname = "Fornavn4", Surname = "Efternavn4", MobNummer = "123456784", Email = "mail@mail.dk4", GitHub = "Github brugernavn4" });
         }
 
-
+        /// <summary>
+        /// Giver JsonFormat for KlasseListe objekt
+        /// </summary>
+        /// <returns></returns>
         public string GetJson()
         {
             string json = JsonConvert.SerializeObject(this);
             return json;
+        }
+        public void HentDataFraDiskenAsync(string jsonText)
+        {
+            List<KlasseInfo> nyListe = JsonConvert.DeserializeObject<List<KlasseInfo>>(jsonText);
+            foreach (var i in nyListe)  
+            {
+                this.Add(i);
+            }
         }
     }
 }

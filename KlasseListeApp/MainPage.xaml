@@ -15,12 +15,15 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="459" Margin="82,84,0,0" VerticalAlignment="Top" Width="443" ItemsSource="{Binding KListe, Mode=TwoWay}" SelectedItem="{Binding selectedElev, Mode=TwoWay}" BorderBrush="#FF4413E0"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="82,562,0,0" TextWrapping="Wrap" Text="{Binding selectedElev, Mode=TwoWay}" VerticalAlignment="Top" Height="88" Width="443" RenderTransformOrigin="0.509,0.5"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="672,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Firstname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Fornavn"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="751,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Surname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Efternavn"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="839,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.MobNummer, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Mobil"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="941,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Email, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Email"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="1010,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.GitHub, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Github brugernavn"/>
-        <Button x:Name="button" Content="Tilføj" HorizontalAlignment="Left" Margin="746,378,0,0" VerticalAlignment="Top" Command="{Binding AddElevCommand}"/>
-        <Button x:Name="button1" Content="Fjern" HorizontalAlignment="Left" Margin="839,378,0,0" VerticalAlignment="Top" Height="32" Width="64" Command="{Binding SletElevCommand}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="631,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Firstname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Fornavn" Width="90" Height="30"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="726,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Surname, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Efternavn" Width="90" Height="30"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="823,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.MobNummer, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Mobil" Width="90" Height="30"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="918,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.Email, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Email" Width="90" Height="30"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="1013,91,0,0" TextWrapping="Wrap" Text="{Binding NewElev.GitHub, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Github brugernavn" Width="150" Height="30"/>
+        <Button x:Name="button" Content="Tilføj" HorizontalAlignment="Left" Margin="631,405,0,0" VerticalAlignment="Top" Command="{Binding AddElevCommand}" Height="59" Width="146"/>
+        <Button x:Name="button1" Content="Fjern" HorizontalAlignment="Left" Margin="802,405,0,0" VerticalAlignment="Top" Height="59" Width="142" Command="{Binding SletElevCommand}"/>
+        <Button x:Name="button2" Content="Gem" HorizontalAlignment="Left" Margin="1007,405,0,0" VerticalAlignment="Top" Height="59" Width="118" Command="{Binding HentDataCommand}"/>
+        <Button x:Name="button3" Content="Hent" HorizontalAlignment="Left" Margin="1007,489,0,0" VerticalAlignment="Top" Height="54" Width="118" Command="{Binding HentDataCommand}" IsTabStop="False"/>
+        <Button x:Name="button5" Content="Button" HorizontalAlignment="Left" Margin="631,489,0,0" VerticalAlignment="Top" Height="131" Width="313"/>
     </Grid>
 </Page>
