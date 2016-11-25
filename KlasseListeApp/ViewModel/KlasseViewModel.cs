@@ -18,6 +18,7 @@ namespace KlasseListeApp.ViewModel
         public AddElevCommand AddElevCommand { get; set; }
         public Model.KlasseInfo NewElev { get; set; }
         public RelayCommand HentDataCommand { get; set; }
+        public RelayCommand SletAlleCommand { get; set; }
 
         private StorageFolder localfolder;
         private Model.KlasseInfo SelectedElev;
@@ -43,6 +44,8 @@ namespace KlasseListeApp.ViewModel
             localfolder = ApplicationData.Current.LocalFolder;
             SaveCommand = new RelayCommand(GemDataTilDiskenAsync);
             HentDataCommand = new RelayCommand(HentDataFraDiskenAsync);
+            SletAlleCommand = new RelayCommand(SletAlle);
+
         }
 
 
@@ -86,7 +89,7 @@ namespace KlasseListeApp.ViewModel
         }
 
 
-
+        //Try catch skal implementeres her
         public async void HentDataFraDiskenAsync()
         {
             this.KListe.Clear();
@@ -96,5 +99,11 @@ namespace KlasseListeApp.ViewModel
 
             KListe.HentDataFraDiskenAsync(jsonText);
         }
+
+        public void SletAlle()
+        {
+            this.KListe.Clear();
+        }
+
     }
 }
